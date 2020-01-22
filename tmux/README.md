@@ -5,7 +5,7 @@
 ## Usage
 ```bash
 cd
-curl -O
+curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/tmux/.tmux.conf
 ```
 
 ## License
