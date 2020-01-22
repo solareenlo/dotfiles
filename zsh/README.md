@@ -1,6 +1,9 @@
 # zsh の構成ファイル
 - oh-my-zsh がオススメ．
 
+## `oh-my-zsh` のインストール
+- [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) を参照のこと．
+
 ## `oh-my-zsh` のテーマ
 - `agnoster` がオススメ．
 
@@ -8,6 +11,3 @@
 ```bash
 plugins=(git docker docker-compose)
 ```
-
-## Reference
-- [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
