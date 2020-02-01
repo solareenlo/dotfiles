@@ -33,6 +33,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('posva/vim-vue')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('altercation/vim-colors-solarized')
+  call dein#add('lifepillar/vim-solarized8')
   call dein#add('morhetz/gruvbox')
   call dein#add('prettier/vim-prettier', {
     \ 'build': 'npm install',
@@ -186,7 +187,8 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 syntax enable
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme solarized8
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
 " htmlの閉じタグ補完
