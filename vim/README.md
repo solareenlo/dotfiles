@@ -33,7 +33,7 @@ vimの設定ファイル.
     ```
 
 7. `dein.vim`を使ってプラグインをインストールする.
-    ```bash
+    ```vim
     :call dein#install()
     ```
 
@@ -42,7 +42,7 @@ vimの設定ファイル.
 - [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ### dein を使ったプラグインのアップデートの仕方
-```bash
+```
 :call dein#update()
 ```
 
@@ -50,3 +50,15 @@ vimの設定ファイル.
 ```bash
 :echo mapleader
 ```
+
+### vim-textlint の使い方
+1. my-lint-rule を作成する．
+2. npm に my-lint-rule を登録する．
+3. `~/.vimrc` の textlint 部分に登録した my-lint-ruru を追加する．
+4. vim で markdown を開いて以下を実行する．
+    ```vim
+    :Textlint - c @solareenlo/my-lint-rule // markdown に対して指定したルールで lint をかけてくれる
+    :cwindow // エラーを表示する
+    ```
+
+Referece: [heavenshell/vim-textlint](https://github.com/heavenshell/vim-textlint)

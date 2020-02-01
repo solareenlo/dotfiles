@@ -24,7 +24,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('vim-airline/vim-airline')
   call dein#add('alvan/vim-closetag')
   call dein#add('suan/vim-instant-markdown')
-  call dein#add('w0rp/ale')
+  " call dein#add('w0rp/ale')
   call dein#add('rust-lang/rust.vim')
   call dein#add('vim-scripts/vim-auto-save')
   call dein#add('leafgarland/typescript-vim')
@@ -34,6 +34,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('lifepillar/vim-solarized8')
+  call dein#add('ayu-theme/ayu-vim')
   call dein#add('morhetz/gruvbox')
   call dein#add('prettier/vim-prettier', {
     \ 'build': 'npm install',
@@ -63,6 +64,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('junegunn/fzf.vim')
   " VIM Table Mode for instant table creation.
   call dein#add('dhruvasagar/vim-table-mode')
+  call dein#add('heavenshell/vim-textlint')
   call dein#end()
   call dein#save_state()
 endif
@@ -183,12 +185,17 @@ set showmode
 " colorscheme desert
 " colorscheme molokai
 " colorscheme gruvbox
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-syntax enable
-set background=dark
 " colorscheme solarized
 colorscheme solarized8
+set background=dark
+" let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+syntax enable
+" set termguicolors     " enable true colors support
+" let ayucolor="light"  " for light version of theme
+" let ayucolor="mirage" " for mirage version of theme
+"  let ayucolor="dark"   " for dark version of theme
+" colorscheme ayu
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
 " htmlの閉じタグ補完
@@ -207,6 +214,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers=['eslint']
+" textlint の configfile の追加
+" textlint.vim {{{
+let g:textlint_configs = [
+  \ '@azu/textlint-config-readme',
+  \ '@example/textlint-config-example',
+  \ ]
+" }}}
 " 全角スペースの表示
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
