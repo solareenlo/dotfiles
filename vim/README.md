@@ -51,8 +51,26 @@ vimの設定ファイル.
 :echo mapleader
 ```
 
-### vim-textlint の使い方
-1. my-lint-rule を作成する．
+### vim-textlint + prh の使い方
+- [textlint](https://github.com/textlint/textlint) ... テキストをリントしてくれる node.js 製ツール．
+- [vim-textlint](https://github.com/heavenshell/vim-textlint) ... textlint を vim で使えるようにしたもの．
+- [textlint-rule-prh](https://github.com/textlint-rule/textlint-rule-prh) .. textlint で [prh](https://github.com/prh/prh) を使えるようにしたもの．
+- の3つを使用する．
+
+#### インストール
+1. textlint が node.js で動くので，まずは `npm init -y` を行う．
+    ```bash
+    mkdir test
+    cd test
+    npm init -y
+    npm i -D textlint
+    npm i -D textlint-rule-prh
+    ./node_modules/.bin/textlint --init
+    ```
+2. [Collection of textlint rule](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule) から使用するリントルールをインストールする．
+    ```bash
+    ```
+1. my-lint-rule を作成するか，[lint 例](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule)からダウンロードする．
 2. npm に my-lint-rule を登録する．
 3. `~/.vimrc` の textlint 部分に登録した my-lint-ruru を追加する．
 4. vim で markdown を開いて以下を実行する．

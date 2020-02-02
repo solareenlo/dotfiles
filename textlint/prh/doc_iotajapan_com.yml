@@ -1,0 +1,12 @@
+version: 1
+rules:
+  - expected: アタッチ
+    pattern:  添付
+  - expected: ビルド
+    pattern:  構築
+  - expected: 預け入れ
+    pattern:  デポジット
+  - expected: 復号化
+    pattern:  デコード
+  - expected: 深さ
+    pattern:  深度
