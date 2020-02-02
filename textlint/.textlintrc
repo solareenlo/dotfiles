@@ -1,11 +1,11 @@
 {
   "filters": {},
-    "rules": {
-        "prh": {
-            "rulePaths" :[
+  "rules": {
+    "prh": {
+        "rulePaths" :[
           "./doc_iotajapan_com.yml"
-            ]
-        }
+        ]
     }
+  }
 }
 
