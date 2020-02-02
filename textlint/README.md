@@ -1,9 +1,8 @@
 # .textlint
-- [textlint](https://github.com/textlint/textlint)で使用するための構成ファイル．
+- [textlint](https://github.com/textlint/textlint) で使用するための構成ファイル．
 
 ## Usage
-- 以下の使い方は，textlint + textlint-vim + prh での使用を想定している．
-- vim 内で textlint と prh を使用するということ．
+- 以下は vim 内で textlint と prh を使用するための方法．
 
 ```bash
 mkdir test
@@ -20,3 +19,10 @@ curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/textlint/pr
 :Textlint
 :cwindow
 ```
+
+## References
+- [textlint/textlint](https://github.com/textlint/textlint)
+- [yuta-masano/vim-textlint](https://github.com/heavenshell/vim-textlint)
+- [prh/prh](https://github.com/prh/prh)
+- [textlint-rule/textlint-rule-prh](https://github.com/textlint-rule/textlint-rule-prh)
+- [textlint + prhで文章を校正する方法](https://qiita.com/munieru_jp/items/83c2c44fcadb177d2806)
