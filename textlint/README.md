@@ -1,8 +1,12 @@
 # .textlint
-- [textlint](https://github.com/textlint/textlint) で使用するための構成ファイル．
+- vim で [textlint](https://github.com/textlint/textlint) と prh を使用するための自分なりの構成ファイル．
 
-## Usage
-- 以下は vim 内で textlint と prh を使用するための方法．
+## Requirement
+- git, curl, Node.js, npm, vim
+
+## Install
+- 以下は vim 内で textlint と prh を使用するためのインストール方法．
+- textlint が Node.js 製なので，npm している．
 
 ```bash
 mkdir test
@@ -14,11 +18,19 @@ curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/textlint/.t
 curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/textlint/prh-rules/doc_iotajapan_com.yml
 ```
 
+- `.textlintrc` の中身を自分が使用する `lint-rules` に変更する．
+- 上の例では `doc_iotajapan_com.yml` という `lint-rules` を使用している．
+
+## Usage
 後は，vim を開いて，以下を実行する．
+
 ```bash
-:Textlint
-:cwindow
+:Textlint // チェックを実行する
+:cwindow // エラーを表示する
 ```
+
+## LICENSE
+MIT
 
 ## References
 - [textlint/textlint](https://github.com/textlint/textlint)
