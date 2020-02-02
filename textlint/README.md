@@ -11,7 +11,7 @@ npm init -y
 npm i -D textlint
 npm i -D textlint-rule-prh
 curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/textlint/.textlintrc
-curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/textlint/prh/doc_iotajapan_com.yml
+curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/textlint/prh-rules/doc_iotajapan_com.yml
 ```
 
 後は，vim を開いて，以下を実行する．

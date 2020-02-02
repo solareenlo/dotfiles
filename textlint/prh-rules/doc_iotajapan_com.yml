@@ -24,6 +24,9 @@ rules:
   - expected: 深度
     pattern:  深さ
     prh: depth は深度と翻訳する．
+  - expected: デポジット
+    pattern:  預け入れ
+    prh: deposit はデポジットと翻訳する．
   - expected: デバイス
     pattern:  端末
     prh: depth はデバイスと翻訳する．
