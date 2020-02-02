@@ -1,12 +1,24 @@
 version: 1
 rules:
+  - expected: ．
+    pattern:  。
+    prh: 句点は全角ピリオドを使用する．
+  - expected: ，
+    pattern:  、
+    prh: 読点は全角カンマを使用する．
   - expected: アタッチ
     pattern:  添付
+    prh: attach はアタッチと翻訳する．
+  - expected: ボディ
+    pattern: 本体
+    prh: body transaction はボディトランザクションと翻訳する．
   - expected: ビルド
     pattern:  構築
-  - expected: 預け入れ
-    pattern:  デポジット
+    prh: build はビルドと翻訳する．
+  - expected: デポジット
+    pattern:  預け入れ
+    prh: deposit はデポジットと翻訳する．
   - expected: 復号化
     pattern:  デコード
-  - expected: 深さ
-    pattern:  深度
+  - expected: 深度
+    pattern:  深さ
