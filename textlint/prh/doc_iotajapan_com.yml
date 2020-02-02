@@ -9,16 +9,127 @@ rules:
   - expected: アタッチ
     pattern:  添付
     prh: attach はアタッチと翻訳する．
-  - expected: ボディ
-    pattern: 本体
+  - expected: ボディトランザクション
+    pattern: 本体トランザクション
     prh: body transaction はボディトランザクションと翻訳する．
   - expected: ビルド
     pattern:  構築
     prh: build はビルドと翻訳する．
-  - expected: デポジット
-    pattern:  預け入れ
-    prh: deposit はデポジットと翻訳する．
-  - expected: 復号化
-    pattern:  デコード
+  - expected: 条件付きデポジットアドレス
+    pattern:  条件付き預け入れアドレス
+    prh: conditional deposit address はデポジットと翻訳する．
+  - expected: デコード
+    pattern:  復号化
+    prh: decode はデコードと翻訳する．
   - expected: 深度
     pattern:  深さ
+    prh: depth は深度と翻訳する．
+  - expected: デバイス
+    pattern:  端末
+    prh: depth はデバイスと翻訳する．
+  - expected: デブネット
+    pattern:  テストネット
+    prh: devnet はデブネットと翻訳する．
+  - expected: フラグメント
+    pattern:  断片
+    prh: fragment はフラグメントと翻訳する．
+  - expected: フューチャーセット
+    pattern: 未来集合
+    prh: future set はフューチャーセットと翻訳する．
+  - expected: ヘッドトランザクション
+    pattern:  先頭トランザクション
+    prh: head transaction はヘッドトランザクションと翻訳する．
+  - expected: イミュータブル
+    pattern:  不変
+    prh: immutable はイミュータブルと翻訳する．
+  - expected: 包含状態
+    pattern:  包含ステート
+    prh: inclusion state は包含状態と翻訳する．
+  - expected: 入力トランアクション
+    pattern: インプットトランザクション
+    prh: input transaction は入力トランザクションと翻訳する．
+  - expected: 台帳
+    pattern:
+      - レジャー
+      - レッジャー
+    prh: ledger は台帳と翻訳する．
+  - expected: 台帳ステート
+    pattern: 台帳のステート
+    prh: ledger state は台帳ステートと翻訳する．
+  - expected: リスト
+    pattern: 一覧
+    prh: list はリストと翻訳する．
+  - expected: メインネット
+    pattern: 本番ネット
+    prh: mainnet はメインネットと翻訳する．
+  - expected: マイクロペイメント
+    pattern:  少額決済
+    prh: micropayment はマイクロペイメントと翻訳する．
+  - expected: 隣接ノード
+    pattern:
+      - ネイバーノード
+      - ネイバー
+    prh: neighbor
+  - expected: ナンス
+    pattern: ノンス
+    prh: nonce はナンスと翻訳する．
+  - expected: ペンディング中
+    pattern:  保留中
+    prh: pending はペンディング中と翻訳する．
+  - expected: パーマノード
+    pattern:  永久ノード
+    prh: permanode はパーマノードと翻訳する．
+  - expected: プロモート
+    pattern: 促進
+    prh: promote はプロモートと翻訳する．
+  - expected: プルーフオブワーク
+    pattern:  仕事の証明
+    prh: proof of work はプルーフオブワークと翻訳する．
+  - expected: プルーニング
+    pattern:  刈り取り
+    prh: prune はプルーニングと翻訳する．
+  - expected: 再アタッチ
+    pattern:  再添付
+    prh: reattach は再添付と翻訳する．
+  - expected: 再ブロードキャスト
+    pattern:  再放送
+    prh: rebroadcast は再ブロードキャストと翻訳する．
+  - expected: 出力トランザクション
+    pattern:  アウトプットトランザクション
+    prh: output transaction は出力トランザクションと翻訳する．
+  - expected: シードステート
+    pattern: シード状態
+    prh: seed state はシードステートと翻訳する．
+  - expected: サーバー
+    pattern:  /サーバ(?!ー)/
+    prh: server はサーバーと翻訳する．
+    specs:
+      - from: サーバ
+        to:   サーバー
+  - expected: ソリッド
+    pattern: 凝固済み
+    prh: solid はソリッドと翻訳する．
+  - expected: 使用済みアドレス
+    pattern:  署名済みアドレス
+    prh: spent address は使用済みアドレスと翻訳する．
+  - expected: サブクスライブ
+    pattern:  購読
+    prh: subscribe はサブスクライブと翻訳する．
+  - expected: テールトランザクション
+    pattern:  末尾トランザクション
+    prh: tail transaction はテールトランザクションと翻訳する．
+  - expected: チップ選択
+    pattern:  ヒント選択
+    prh: tip selection はチップ選択と翻訳する．
+  - expected: チップトランザクション
+    pattern:  ヒントトランザクション
+    prh: tip transaction はチップトランザクションと翻訳する．
+  - expected: 概観
+    pattern:  ビュー
+    prh: view は概観と翻訳する．
+  - expected: 取り出し
+    pattern:  撤回
+    prh: withdraw は取り出しと翻訳する．
+  - expected: ゼロトークントランザクション
+    pattern:  ゼロバリュートランザクション
+    prh: zero-value transaction はゼロトークントランザクションと翻訳する
