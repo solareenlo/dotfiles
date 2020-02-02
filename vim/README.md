@@ -57,26 +57,18 @@ vimの設定ファイル.
 - [textlint-rule-prh](https://github.com/textlint-rule/textlint-rule-prh) .. textlint で [prh](https://github.com/prh/prh) を使えるようにしたもの．
 - の3つを使用する．
 
-#### インストール
-1. textlint が node.js で動くので，まずは `npm init -y` を行う．
-    ```bash
-    mkdir test
-    cd test
-    npm init -y
-    npm i -D textlint
-    npm i -D textlint-rule-prh
-    ./node_modules/.bin/textlint --init
-    ```
-2. [Collection of textlint rule](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule) から使用するリントルールをインストールする．
-    ```bash
-    ```
-1. my-lint-rule を作成するか，[lint 例](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule)からダウンロードする．
+#### Install & Usage
+##### 単に vim-textlint に prh を使う方法
+- https://github.com/solareenlo/dotfiles/tree/master/textlint を参照のこと．
+
+##### 自分なりの rule を作成して，それを npm に登録して，.vimrc から使う方法
+1. my-lint-rule を作成するか，[lint 例](https://github.com/textlint/textlint/wiki/Collection-of-textlint-rule)から lint-rules をダウンロードする．
 2. npm に my-lint-rule を登録する．
-3. `~/.vimrc` の textlint 部分に登録した my-lint-ruru を追加する．
+3. `~/.vimrc` の textlint 部分に登録した my-lint-rule を追加する．
 4. vim で markdown を開いて以下を実行する．
     ```vim
-    :Textlint - c @solareenlo/my-lint-rule // markdown に対して指定したルールで lint をかけてくれる
+    :Textlint -c @solareenlo/my-lint-rule // markdown に対して指定したルールで lint をかけてくれる
     :cwindow // エラーを表示する
     ```
 
-Referece: [heavenshell/vim-textlint](https://github.com/heavenshell/vim-textlint)
+  Referece: [heavenshell/vim-textlint](https://github.com/heavenshell/vim-textlint)
