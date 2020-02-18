@@ -179,6 +179,8 @@ set expandtab
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 " 現在のモードを表示
 set showmode
 " カラースキームの設定
