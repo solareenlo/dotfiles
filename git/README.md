@@ -4,6 +4,13 @@
 
 # Usage
 ```bash
+cd
+culr -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/git/.gitconfig
+```
+
+or
+
+```bash
 # ユーザー名を登録
 git config --global user.name "solareenlo"
 # メールアドレスを登録
