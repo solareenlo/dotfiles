@@ -6,6 +6,9 @@
 ```bash
 cd
 curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/tmux/.tmux.conf
+
+# ターミナルの再読込
+exec $SHELL -l
 ```
 
 ### tmux の基本的な操作方法
