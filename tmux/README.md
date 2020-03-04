@@ -6,6 +6,8 @@
 ```bash
 cd
 curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/tmux/.tmux.conf
+# Mac の場合はそのまま使える
+# Ubuntu の場合は Mac Win 用の行をコメントアウトしてから以下を実行する
 
 # ターミナルの再読込
 exec $SHELL -l
