@@ -65,6 +65,7 @@ if dein#load_state('~/.cache/dein')
   " VIM Table Mode for instant table creation.
   call dein#add('dhruvasagar/vim-table-mode')
   call dein#add('heavenshell/vim-textlint')
+  call dein#add('mattn/emmet-vim')
   call dein#end()
   call dein#save_state()
 endif
