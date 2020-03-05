@@ -34,7 +34,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('nikvdp/ejs-syntax')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('lifepillar/vim-solarized8')
-  call dein#add('ayu-theme/ayu-vim')
+  " call dein#add('ayu-theme/ayu-vim')
   call dein#add('morhetz/gruvbox')
   call dein#add('prettier/vim-prettier', {
     \ 'build': 'npm install',
@@ -58,14 +58,17 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ryanoasis/vim-devicons')
   call dein#add('ekalinin/Dockerfile.vim')
   " call dein#add('lervag/vimtex')
-  call dein#add('tokorom/vim-review')
+  " call dein#add('tokorom/vim-review')
   call dein#add('frazrepo/vim-rainbow')
+  call dein#add('luochen1990/rainbow')
   call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
   call dein#add('junegunn/fzf.vim')
   " VIM Table Mode for instant table creation.
   call dein#add('dhruvasagar/vim-table-mode')
   call dein#add('heavenshell/vim-textlint')
   call dein#add('mattn/emmet-vim')
+  call dein#add('itchyny/vim-cursorword')
+  call dein#add('itchyny/vim-parenmatch')
   call dein#end()
   call dein#save_state()
 endif
@@ -86,7 +89,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " NERDTreeを表示するコマンドを設定する
 nnoremap <C-n> :NERDTreeToggle<CR>
 " カッコをレインボーカラーにする
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
 " let g:rainbow_load_separately = [
 "     \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
 "     \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
@@ -179,8 +182,6 @@ set expandtab
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
 " 現在のモードを表示
 set showmode
 " カラースキームの設定
@@ -218,12 +219,15 @@ let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_javascript_checkers=['eslint']
 " textlint の configfile の追加
 " textlint.vim {{{
-let g:textlint_configs = [
-  \ '@azu/textlint-config-readme',
-  \ '@example/textlint-config-example',
-  \ ]
+" let g:textlint_configs = [
+  " \ '@azu/textlint-config-readme',
+  " \ '@example/textlint-config-example',
+  " \ ]
 " }}}
+
+"-------------------------------------------------------------------------
 " 全角スペースの表示
+"-------------------------------------------------------------------------
 function! ZenkakuSpace()
     highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 endfunction
