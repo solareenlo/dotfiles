@@ -45,7 +45,7 @@ GIT_PS1_SHOWCOLORHINTS=true
 - [「Git補完をしらない」「git statusを1日100回は使う」そんなあなたに朗報【git-completionとgit-prompt】](https://qiita.com/varmil/items/9b0aeafa85975474e9b6)
 
 ### .fzf をインストールする
-```console
+```bash
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 ```
@@ -53,7 +53,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 - https://github.com/junegunn/fzf
 
 ### nvm をインストールする
-```console
+```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
