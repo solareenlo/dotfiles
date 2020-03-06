@@ -41,6 +41,21 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS=true
 ```
-
-## Reference
+#### Reference
 - [「Git補完をしらない」「git statusを1日100回は使う」そんなあなたに朗報【git-completionとgit-prompt】](https://qiita.com/varmil/items/9b0aeafa85975474e9b6)
+
+### .fzf をインストールする
+```console
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+#### Reference
+- https://github.com/junegunn/fzf
+
+### nvm をインストールする
+```console
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+#### Reference
+- https://github.com/nvm-sh/nvm
