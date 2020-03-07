@@ -11,12 +11,38 @@ vimの設定ファイル.
     mkdir .vimbackup
     ```
 
-3. ディレクトリなどの絵文字を表示するためのフォントをインストールする.
+3. ディレクトリなどの絵文字を表示するための nerd フォントをインストールする.
 
 - https://github.com/ryanoasis/nerd-fonts#patched-fonts
 
-- Linux の場合、上記のリンクから好きなフォントを選んで, `nerd-fonts/patched-fonts/Ubuntu/Regular/complete/` のように進んで, `*.ttf` や `*.otf` を `~/.fonts` ディレクトリに保存する.
-- macOS の場合は、上記のリンクの README.md ファイルを読んで brew を使ってインストールするのが楽です.
+- Linux の場合
+  - パッチ済みフォントを直接ダウンロードする方法
+    - 上記のリンクから好きなフォントを選んで, `nerd-fonts/patched-fonts/Hack/Regular/complete/` のように進んで, `*.ttf` や `*.otf` を `~/.fonts` ディレクトリに保存する.
+      ```bash
+      # そして以下を実行する
+      fc-cache -fv
+      ```
+  - リリースアーカイブから直接フォントをダウンロードする方法
+    - https://github.com/ryanoasis/nerd-fonts/releases/latest に行って，`Hack.zip` を `~/.fonts` に解凍する．
+      ```bash
+      # そして，以下を実行する
+      fc-cache -fv
+      ```
+  - curl を使う方法
+    ```bash
+    mkdir -p ~/.local/share/fonts
+    cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+    ```
+- macOS の場合
+  - brew を使う方法
+    ```bash
+    brew tap homebrew/cask-fonts
+    brew cask install font-hack-nerd-font
+    ```
+  - curl を使う方法
+    ```bash
+    cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+    ```
 
 4. ターミナルを開いて, 先程インストールしたフォントを設定する.
 
