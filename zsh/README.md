@@ -10,7 +10,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Hack Nerd Font のインストール
 # Mac なら以下を実行するのが簡単．
 brew cask install font-hack-nerd-font
-# 自分の好きな Nerd Font をインストールするなら /dotfile/vim/ の項目を参照のこと.
+# Linux や自分の好きな Nerd Font をインストールするなら ../vim/ の項目を参照のこと.
 
 # oh-my-zsh のテーマ powerlevel9k のインストール
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
