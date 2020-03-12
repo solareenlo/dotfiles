@@ -68,12 +68,12 @@ vimの設定ファイル.
 - [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)
 
 ### dein を使ったプラグインのアップデートの仕方
-```
+```vim
 :call dein#update()
 ```
 
 ### leader 確認
-```bash
+```vim
 :echo mapleader
 ```
 
