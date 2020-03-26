@@ -44,6 +44,8 @@ vimの設定ファイル.
     cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
     ```
 
+4. 日本語用のプログラミング用のフォントの [miiton/Cica](https://github.com/miiton/Cica) をインストールする．
+
 4. ターミナルを開いて, 先程インストールしたフォントを設定する.
 
 5. [junegunn/fzf](https://github.com/junegunn/fzf#using-git)をインストールする．
