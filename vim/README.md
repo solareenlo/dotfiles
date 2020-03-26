@@ -45,6 +45,29 @@ vimの設定ファイル.
     ```
 
 4. 日本語用のプログラミング用のフォントの [miiton/Cica](https://github.com/miiton/Cica) をインストールする．
+  - 上記サイトから Cica フォントをビルドしても，リリースアーカイブからダウンロードしてもよいので，`*.ttf` ファイルを `~/.fonts` に保存する．
+      ```bash
+      # Linux の場合は，以下を実行する
+      fc-cache -fv
+      ```
+  - 上記を実行して，端末のフォント設定で Cica が選択できないときは，`gsettings` を利用して設定する．
+      ```bash
+      # プロファイルのリストを取得する
+      gsettings get org.gnome.Terminal.ProfilesList list
+      > ['b1dcc9dd-5262-4d8d-a863-c897e6d979b9']
+      # 上記のプロファイルのインデックスは0なので，以下のように0を指定して，プロファイルのキーのリストの中から font が有ることを確認する
+      gsettings list-keys org.gnome.Terminal.Legacy.Profile:/:0/ | grep font
+      > use-system-font
+      > font
+      # 以下でダウンロードした Cica の表記の仕方を確認する
+      fc-list | grep Cica
+      > /path/to/the/.fonts/Cica-BoldItalic.ttf: Cica:style=Bold Italic
+      > /path/to/the/.fonts/Cica-RegularItalic.ttf: Cica:style=Italic
+      > /path/to/the/.fonts/Cica-Bold.ttf: Cica:style=Bold
+      > /path/to/the/.fonts/Cica-Regular.ttf: Cica:style=Regular
+      # 以下で Cica Regular フォントを設定する
+      gsettings set org.gnome.Terminal.Legacy.Profile:/:0/ font Cica:style=Regular
+      ```
 
 4. ターミナルを開いて, 先程インストールしたフォントを設定する.
 
