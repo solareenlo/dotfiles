@@ -68,6 +68,7 @@ vimの設定ファイル.
       # 以下で Cica Regular フォントを設定する
       gsettings set org.gnome.Terminal.Legacy.Profile:/:0/ font Cica:style=Regular
       ```
+  - Reference: [Ubuntu 18.04 のターミナルフォントにリスト表示されないフォントを指定する](https://zv-louis.hatenablog.com/entry/2018/05/28/120000)
 
 4. ターミナルを開いて, 先程インストールしたフォントを設定する.
 
