@@ -69,6 +69,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('mattn/emmet-vim')
   call dein#add('itchyny/vim-cursorword')
   call dein#add('itchyny/vim-parenmatch')
+  call dein#add('octol/vim-cpp-enhanced-highlight')
   call dein#end()
   call dein#save_state()
 endif
