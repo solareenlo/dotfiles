@@ -106,3 +106,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
+
+alias chrome="open -a '/Applications/Google Chrome.app'"
+alias typora="open -a Typora"
+alias norminette="~/.norminette/norminette.rb"
+alias norm="norminette -R CheckForbiddenSourceHeader"
+alias gccw="gcc -Wall -Wextra -Werror"
+alias g++="g++ -std=c++17"
+alias atc="atcoder-tools"
