@@ -1,5 +1,5 @@
 [codestyle]
 indent_type='space'
 indent_width=4
-template_file='~/.atcoder-tools/my_template_ab.cpp'
+template_file='~/.atcoder-tools/my_template.cpp'
 workspace_dir='~/github/cpp/atcoder/05_AtCoder-Beginner-Contest/'
