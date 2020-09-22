@@ -59,8 +59,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('ekalinin/Dockerfile.vim')
   " call dein#add('lervag/vimtex')
   call dein#add('tokorom/vim-review')
-  call dein#add('frazrepo/vim-rainbow')
-  call dein#add('luochen1990/rainbow')
+  " call dein#add('frazrepo/vim-rainbow')
+  " call dein#add('luochen1990/rainbow')
   call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
   call dein#add('junegunn/fzf.vim')
   " VIM Table Mode for instant table creation.
@@ -68,8 +68,10 @@ if dein#load_state('~/.cache/dein')
   call dein#add('heavenshell/vim-textlint')
   call dein#add('mattn/emmet-vim')
   call dein#add('itchyny/vim-cursorword')
-  call dein#add('itchyny/vim-parenmatch')
+  " call dein#add('itchyny/vim-parenmatch')
   call dein#add('octol/vim-cpp-enhanced-highlight')
+  call dein#add('lambdalisue/nerdfont.vim')
+  " call dein#add('mg979/vim-visual-multi') " 複数行編集
   call dein#end()
   call dein#save_state()
 endif
@@ -77,18 +79,25 @@ filetype plugin indent on
 if dein#check_install()
   call dein#install()
 endif
+
 " Prettierがシングルコートを使用するように設定
 let g:prettier#config#single_quote = 'true'
 " Vimがクリップボードを使えるようにする
 " mac用
 set clipboard+=unnamed,autoselect
+set encoding=UTF-8
 " ubuntu用
 " set clipboard=unnamedplus
+
+"----------------------------------------------------------
+" NERDTree
+"----------------------------------------------------------
 " ファイル名が指定されてVIMが起動した場合はNERDTreeを表示しない
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " NERDTreeを表示するコマンドを設定する
 nnoremap <C-n> :NERDTreeToggle<CR>
+
 " カッコをレインボーカラーにする
 " let g:rainbow_active = 1
 " let g:rainbow_load_separately = [
@@ -99,8 +108,13 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 "     \ ]
 " let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 " let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+"----------------------------------------------------------
+" fzf
+"----------------------------------------------------------
 " fzfの設定
 set rtp+=~/.fzf
+
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
@@ -117,8 +131,8 @@ set smartindent
 " タブ文字の表示幅
 set tabstop=4
 " Vimが挿入するインデントの幅
-set shiftwidth=2
-" set shiftwidth=4
+" set shiftwidth=2
+set shiftwidth=4
 " 行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする
 set smarttab
 " 暗い背景色に合わせた配色にする
@@ -178,11 +192,11 @@ if has("autocmd")
     \ endif
 endif
 " タブ入力を複数の空白入力に置き換える
-set expandtab
+" set expandtab
 " 自動的に閉じ括弧を入力
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
+" imap { {}<LEFT>
+" imap [ []<LEFT>
+" imap ( ()<LEFT>
 " 現在のモードを表示
 set showmode
 " カラースキームの設定
@@ -219,7 +233,17 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pylint','pyflakes', 'pep8']
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_cpp_compiler="gcc"
-let g:syntastic_cpp_compiler_options=" -std=c++11"
+" let g:syntastic_cpp_compiler_options=" -std=c++11"
+" let g:syntastic_cpp_compiler_options=" -std=c++14"
+let g:syntastic_cpp_compiler_options=" -std=c++17"
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_posix_standard = 1
+let g:cpp_experimental_simple_template_highlight = 1
+" let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
+let g:cpp_no_function_highlight = 1
 " textlint の configfile の追加
 " textlint.vim {{{
 " let g:textlint_configs = [
