@@ -114,3 +114,4 @@ alias norm="norminette -R CheckForbiddenSourceHeader"
 alias gccw="gcc -Wall -Wextra -Werror"
 alias g++="g++ -std=c++17"
 alias atc="atcoder-tools"
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
