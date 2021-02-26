@@ -145,3 +145,11 @@ fi
 # Go言語
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+# 履歴補完
+bind '"\C-n": history-search-forward'
+bind '"\C-p": history-search-backward'
+# 上矢印キー
+bind '"\e[A": history-search-backward'
+# 下矢印キー
+bind '"\e[B": history-search-forward'
