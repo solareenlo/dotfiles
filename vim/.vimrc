@@ -71,6 +71,7 @@ if dein#load_state('~/.cache/dein')
   " call dein#add('itchyny/vim-parenmatch')
   call dein#add('octol/vim-cpp-enhanced-highlight')
   call dein#add('lambdalisue/nerdfont.vim')
+  call dein#add('yuttie/comfortable-motion.vim')
   " call dein#add('mg979/vim-visual-multi') " 複数行編集
   call dein#end()
   call dein#save_state()
