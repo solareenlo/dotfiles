@@ -84,3 +84,7 @@ bind -T copy-mode-vi Y send -X copy-line
 
 # 'C-p'でペースト
 bind-key C-p paste-buffer
+
+# コピーモード中 y か Enter でヤンク (コピー)
+bind-key -T copy-mode-vi y     send-keys -X copy-pipe-and-cancel "pbcopy" \; display "Copied!"
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "pbcopy" \; display "Copied!"
