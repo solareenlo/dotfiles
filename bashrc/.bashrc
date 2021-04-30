@@ -153,3 +153,5 @@ bind '"\C-p": history-search-backward'
 bind '"\e[A": history-search-backward'
 # 下矢印キー
 bind '"\e[B": history-search-forward'
+
+alias gccw="gcc -Wall -Wextra -Werror -fsanitize=address"
