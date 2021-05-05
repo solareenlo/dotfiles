@@ -74,6 +74,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('yuttie/comfortable-motion.vim')
   " call dein#add('mg979/vim-visual-multi') " 複数行編集
   call dein#add('rstacruz/vim-closer')
+  call dein#add('wfxr/minimap.vim')
   call dein#end()
   call dein#save_state()
 endif
@@ -322,6 +323,13 @@ let g:table_mode_corner = '|'
 
 " 検索位置が何番目かを表示
 set shortmess-=S
+
+"----------------------------------------------------------
+" minimap.vim
+"----------------------------------------------------------
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
 
 "----------------------------------------------------------
 " vim-anzu
