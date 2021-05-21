@@ -75,6 +75,7 @@ if dein#load_state('~/.cache/dein')
   " call dein#add('mg979/vim-visual-multi') " 複数行編集
   call dein#add('rstacruz/vim-closer')
   call dein#add('wfxr/minimap.vim')
+  call dein#add('drmikehenry/vim-headerguard')
   call dein#end()
   call dein#save_state()
 endif
