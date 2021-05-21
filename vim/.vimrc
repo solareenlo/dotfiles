@@ -236,10 +236,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['pylint','pyflakes', 'pep8']
 let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_cpp_compiler="gcc"
+let g:syntastic_cpp_compiler="clang++"
 " let g:syntastic_cpp_compiler_options=" -std=c++11"
 " let g:syntastic_cpp_compiler_options=" -std=c++14"
 let g:syntastic_cpp_compiler_options=" -std=c++17"
+let g:syntastic_cpp_cpplint_exec = 'cpplint'
+let g:syntastic_cpp_checkers = ['cpplint']
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
