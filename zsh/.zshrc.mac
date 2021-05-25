@@ -109,9 +109,18 @@ export PATH="/usr/local/opt/ncurses/bin:$PATH"
 
 alias chrome="open -a '/Applications/Google Chrome.app'"
 alias typora="open -a Typora"
-alias norminette="~/.norminette/norminette.rb"
-alias norm="norminette -R CheckForbiddenSourceHeader"
-alias gccw="gcc -Wall -Wextra -Werror"
+alias gccw="gcc -Wall -Wextra -Werror -fsanitize=address"
+alias g++w="g++ -std=c++98 -Wall -Wextra -Werror -fsanitize=address"
 alias g++="g++ -std=c++17"
 alias atc="atcoder-tools"
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+export INT_MAX=2147483647
+export INT_MIN=-2147483648
+export UINT_MAX=4294967295
+export LONG_MAX=9223372036854775807
+export LONG_MIN=-9223372036854775808
+export ULONG_MAX=18446744073709551615
+export SIZE_MAX=18446744073709551615
+
+alias fzf='fzf --preview "bat  --color=always --style=header,grid --line-range :100 {}"'
