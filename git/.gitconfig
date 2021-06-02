@@ -5,7 +5,7 @@
 	co = checkout
 	br = branch
 	ci = commit
-    sw = switch
+	sw = switch
 [user]
 	name = solareenlo
 	email = solareenlo@gmail.com
