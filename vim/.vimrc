@@ -128,6 +128,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 "----------------------------------------------------------
 set rtp+=/Users/solareenlo/.brew/opt/fzf
 nnoremap <Leader>f :FZF<CR>
+let $FZF_DEFAULT_OPTS = '--preview "bat --style=numbers --color=always --line-range :500 {}"'
 nnoremap <silent> <Leader>r :<C-u>silent call <SID>find_rip_grep()<CR>
 
 function! s:find_rip_grep() abort
