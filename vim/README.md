@@ -37,7 +37,7 @@ vimの設定ファイル.
   - brew を使う方法
     ```bash
     brew tap homebrew/cask-fonts
-    brew cask install font-hack-nerd-font
+    brew install --cask font-hack-nerd-font
     ```
   - curl を使う方法
     ```bash
