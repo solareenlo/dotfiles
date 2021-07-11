@@ -107,3 +107,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
+# 重複パスを登録しない
+typeset -U path PATH
