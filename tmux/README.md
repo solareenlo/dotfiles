@@ -3,7 +3,10 @@
 - 配置場所は `~/.tmux.conf` です．
 
 ## Usage
-```bash
+```shell
+# .zshrc の中身で Unicode が使えるように .zshrc の中身を以下を追記する
+alias tmux='tmux -u'
+
 cd
 curl -O https://raw.githubusercontent.com/solareenlo/dotfiles/master/tmux/.tmux.conf
 # Mac の場合はそのまま使える
