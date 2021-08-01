@@ -4,7 +4,7 @@
 
 ## Usage
 ```shell
-# .zshrc の中身で Unicode が使えるように .zshrc の中身を以下を追記する
+# tmux で Unicode がきちんと表示されるように .zshrc の中身に以下を追記する
 alias tmux='tmux -u'
 
 cd
