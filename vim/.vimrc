@@ -1,374 +1,237 @@
-" Shougo/dein.vimを使用するためのところ
 if &compatible
-  set nocompatible
+    set nocompatible " Be iMproved
 endif
+
+" Required:
 " Add the dein installation directory into runtimepath
 set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
+
+" Required:
+call dein#begin('~/.cache/dein')
+
+" Let dein manage dein
+call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
+if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-  call dein#add('Shougo/echodoc.vim')
-  call dein#add('liuchengxu/vista.vim')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('tpope/vim-fugitive')
-  " call dein#add('nathanaelkane/vim-indent-guides')
-  call dein#add('Yggdroot/indentLine')
-  call dein#add('bronson/vim-trailing-whitespace')
-  call dein#add('vim-syntastic/syntastic')
-  call dein#add('airblade/vim-gitgutter')
-  call dein#add('tomtom/tcomment_vim')
-  call dein#add('tpope/vim-surround')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('alvan/vim-closetag')
-  call dein#add('suan/vim-instant-markdown')
-  call dein#add('rust-lang/rust.vim')
-  call dein#add('vim-scripts/vim-auto-save')
-  call dein#add('leafgarland/typescript-vim')
-  call dein#add('digitaltoad/vim-pug')
-  call dein#add('tomlion/vim-solidity')
-  call dein#add('posva/vim-vue')
-  call dein#add('nikvdp/ejs-syntax')
-  call dein#add('altercation/vim-colors-solarized')
-  call dein#add('lifepillar/vim-solarized8')
-  call dein#add('embark-theme/vim')
-  call dein#add('prettier/vim-prettier', {
-    \ 'build': 'npm install',
-    \ 'on_ft': [
-    \ 'javascript',
-    \ 'typescript',
-    \ 'css',
-    \ 'less',
-    \ 'scss',
-    \ 'json',
-    \ 'graphql',
-    \ 'markdown',
-    \ 'vue',
-    \ 'lua',
-    \ 'php',
-    \ 'python',
-    \ 'ruby',
-    \ 'html',
-    \ 'swift' ]})
-  call dein#add('osyo-manga/vim-anzu')
-  call dein#add('ryanoasis/vim-devicons')
-  call dein#add('ekalinin/Dockerfile.vim')
-  " call dein#add('lervag/vimtex')
-  call dein#add('tokorom/vim-review')
-  call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
-  call dein#add('junegunn/fzf.vim')
-  " VIM Table Mode for instant table creation.
-  call dein#add('dhruvasagar/vim-table-mode')
-  call dein#add('heavenshell/vim-textlint')
-  call dein#add('mattn/emmet-vim')
-  call dein#add('itchyny/vim-cursorword')
-  " call dein#add('itchyny/vim-parenmatch')
-  call dein#add('octol/vim-cpp-enhanced-highlight')
-  call dein#add('lambdalisue/nerdfont.vim')
-  call dein#add('yuttie/comfortable-motion.vim')
-  " call dein#add('rstacruz/vim-closer')
-  call dein#add('wfxr/minimap.vim')
-  " call dein#add('mg979/vim-visual-multi') " 複数行編集
-  call dein#add('drmikehenry/vim-headerguard')
-  call dein#add('segeljakt/vim-silicon')
-  call dein#add('SirVer/ultisnips')
-  call dein#add('honza/vim-snippets')
-  call dein#add('autozimu/LanguageClient-neovim', {
-    \ 'rev': 'next',
-    \ 'build': 'bash install.sh',
-    \ })
-  call dein#end()
-  call dein#save_state()
 endif
+
+" Add or remove your plugins here like this:
+call dein#add('xolox/vim-misc')
+call dein#add('xolox/vim-session')
+call dein#add('easymotion/vim-easymotion')
+call dein#add('tpope/vim-surround')
+call dein#add('vim-scripts/vim-auto-save')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('lifepillar/vim-solarized8')
+call dein#add('tomtom/tcomment_vim')
+call dein#add('Yggdroot/indentLine')
+call dein#add('vim-airline/vim-airline')
+call dein#add('vim-airline/vim-airline-themes')
+call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('dhruvasagar/vim-table-mode')
+call dein#add('scrooloose/nerdtree')
+call dein#add('osyo-manga/vim-anzu')
+call dein#add('prabirshrestha/vim-lsp')
+call dein#add('mattn/vim-lsp-settings')
+call dein#add('shun/ddc-source-vim-lsp')
+call dein#add('Shougo/ddc.vim')
+call dein#add('vim-denops/denops.vim')
+call dein#add('Shougo/ddc-ui-native')
+call dein#add('Shougo/ddc-source-around')
+call dein#add('Shougo/ddc-matcher_head')
+call dein#add('Shougo/ddc-sorter_rank')
+call dein#add('Shougo/echodoc.vim')
+call dein#add('SirVer/ultisnips')
+call dein#add('honza/vim-snippets')
+call dein#add('tpope/vim-fugitive')
+call dein#add('airblade/vim-gitgutter')
+"" Include user's extra bundle
+" if filereadable(expand("~/.vimrc_python_bundles"))
+"   source ~/.vimrc_python_bundles
+" endif
+" Required:
+call dein#end()
+
+call dein#add('junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' })
+call dein#add('junegunn/fzf.vim')
+
+" Required:
 filetype plugin indent on
-if dein#check_install()
-  call dein#install()
+
+
+"*****************************************************************************
+"" Basic Setup
+"*****************************************************************************"
+"" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+"" Tabs. May be overridden by autocmd rules
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set smarttab
+" set expandtab
+
+set autoindent
+set encoding=utf-8
+set showmatch
+set shortmess-=S
+set whichwrap=b,s,h,l,<,>,[,],~
+set clipboard+=unnamed,autoselect
+setlocal spell spelllang=en_us
+
+if exists('$SHELL')
+    set shell=$SHELL
+else
+    set shell=/bin/sh
 endif
 
 
-"----------------------------------------------------------
-" mapleader の設定
-"----------------------------------------------------------
-let mapleader = ','
-nnoremap <Leader>a :echo "Hello"<CR>
-
-
-"----------------------------------------------------------
-" Prettierがシングルコートを使用するように設定
-"----------------------------------------------------------
-let g:prettier#config#single_quote = 'true'
-
-
-"----------------------------------------------------------
-" Vimがクリップボードを使えるようにする
-"----------------------------------------------------------
-" mac用
-set clipboard+=unnamed,autoselect
-set encoding=UTF-8
-" ubuntu用
-" set clipboard=unnamedplus
-
-
-"----------------------------------------------------------
-" NERDTree
-"----------------------------------------------------------
-" ファイル名が指定されてVIMが起動した場合はNERDTreeを表示しない
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" NERDTreeを表示するコマンドを設定する
-nnoremap <C-n> :NERDTreeToggle<CR>
-
-
-"----------------------------------------------------------
-" fzf
-"----------------------------------------------------------
-set rtp+=/Users/solareenlo/.brew/opt/fzf
-nnoremap <Leader>f :FZF<CR>
-let $FZF_DEFAULT_OPTS = '--preview "bat --style=numbers --color=always --line-range :500 {}"'
-nnoremap <silent> <Leader>r :<C-u>silent call <SID>find_rip_grep()<CR>
-
-function! s:find_rip_grep() abort
-    call fzf#vim#grep(
-        \   'rg --ignore-file ~/.ignore --column --line-number --no-heading --hidden --smart-case .+',
-        \   1,
-        \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%', '?'),
-        \   0,
-        \ )
-endfunction
-
-
-" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
-
-"----------------------------------------------------------
-" オートセーブを自動で有効化
-"----------------------------------------------------------
-let g:auto_save = 1
-
-" インサートモードで自動保存するかどうかの設定
-let g:auto_save_in_insert_mode = 0
-" 改行時に前の行のインデントを継続する
-set autoindent
-" 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-set smartindent
-" タブ文字の表示幅
-" set tabstop=2
-set tabstop=4
-" Vimが挿入するインデントの幅
-" set shiftwidth=2
-set shiftwidth=4
-" 行頭の余白内で Tab を打ち込むと、'shiftwidth' の数だけインデントする
-set smarttab
-" 暗い背景色に合わせた配色にする
-set background=dark
-" カーソルラインをハイライト
-set cursorline
-" vim の独自拡張機能を使用(viとの互換性無し)
-set nocompatible
-" 文字コードを指定
-set encoding=utf-8
-" ファイルエンコードを指定(先頭から順に成功するまで読み込む)
-set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
-" 自動認識させる改行コードを指定
-set fileformats=unix,dos
-" バックアップを取得
-" 逆は [ set nobackup ]
-set backup
-" バックアップを取得するディレクトリを指定
-set backupdir=~/.vimbackup
-" 検索履歴を残す世代数
-set history=500
-" 検索時に大文字小文字を区別しない
-set ignorecase
-" 検索語に大文字を混ぜると検索時に大文字を区別する
-set smartcase
-" 検索語にマッチした単語をハイライト
-" 逆は [ set nohlsearch ]
-set hlsearch
-" インクリメンタルサーチを使用 (検索語の入力最中から随時マッチする文字列の検索を開始)
-" 逆は [ set noincsearch ]
-set incsearch
-" 行番号を表示
-" 逆は [ set nonumber ]
+"*****************************************************************************
+"" Visual Settings
+"*****************************************************************************
+syntax enable
 set number
-" 改行 ( $ ) やタブ ( ^I ) を可視化
-" set list
-" 括弧入力時に対応する括弧を強調
-set showmatch
-" 自動インデントを有効にする
-" 逆は [ noautoindent ]
-set autoindent
-" 構文ごとに色分け表示
-" 逆は [ syntax off ]
-syntax on
-" カーソルを行頭、行末で止まらないようにする
-set whichwrap=b,s,h,l,<,>,[,],~
-" [ syntax on ] の場合のコメント文の色を変更
-highlight Comment ctermfg=LightCyan
-" ウィンドウ幅で行を折り返す
-" 逆は [ set nowrap ]
-set wrap
-" 最後のカーソル位置を復元する
+set cursorline
+set ruler
+
+"" Color
+" let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+set background=dark
+colorscheme solarized8
+
+
+"----------------------------------------------------------
+" Rust
+"----------------------------------------------------------
+call dein#add('rust-lang/rust.vim')
+let g:rustfmt_autosave = 1
+let g:syntastic_rust_checkers = ['rustc']
+" let g:syntastic_rust_checkers = ['cargo']
+
+
+"----------------------------------------------------------
+" Go
+"----------------------------------------------------------
+call dein#add('mattn/vim-goimports')
+call dein#add('buoto/gotests-vim')
+
+
+"-------------------------------------------------------------------------------
+" Include user's local vim config
+"-------------------------------------------------------------------------------
+" if filereadable(expand("~/.vimrc_cpp"))
+"     source ~/.vimrc_cpp
+" endif
+
+" if filereadable(expand("~/.vimrc_c"))
+"   source ~/.vimrc_c
+" endif
+
+" if filereadable(expand("~/.vimrc_42"))
+"   source ~/.vimrc_42
+" endif
+
+" if filereadable(expand("~/.vimrc_python"))
+"   source ~/.vimrc_python
+" endif
+
+
+"-------------------------------------------------------------------------------
+" Restore the last cursor position.
+"-------------------------------------------------------------------------------
 if has("autocmd")
     autocmd BufReadPost *
-    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-    \   exe "normal! g'\"" |
-    \ endif
+                \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+                \   exe "normal! g'\"" |
+                \ endif
 endif
-" タブ入力を複数の空白入力に置き換える
-set expandtab
-" 自動的に閉じ括弧を入力
-" imap { {}<LEFT>
-" imap [ []<LEFT>
-" imap ( ()<LEFT>
-" 現在のモードを表示
-set showmode
-" カラースキームの設定
-" colorscheme desert
-" colorscheme solarized
-colorscheme solarized8
-set background=dark
-let g:solarized_termtrans=1
-" let g:solarized_termcolors=256
-" colorscheme embark
-" let g:embark_terminal_italics = 1
-" let g:lightline = {
-"       \ 'colorscheme': 'embark',
-"       \ }
-syntax enable
-" set termguicolors     " enable true colors support
-" let ayucolor="light"  " for light version of theme
-" let ayucolor="mirage" " for mirage version of theme
-" let ayucolor="dark"   " for dark version of theme
-" 行番号の色
-highlight LineNr ctermfg=darkyellow
-" htmlの閉じタグ補完
-" augroup MyXML
-"   autocmd!
-"   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>
-"   autocmd Filetype html inoremap <buffer> </ </<C-x><C-o>
-" augroup END
-" syntasticの構文エラーチェック
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers = ['pylint','pyflakes', 'pep8']
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_cpp_compiler="clang++"
-let g:syntastic_cpp_compiler_options=" -std=c++11"
-" let g:syntastic_cpp_compiler_options=" -std=c++14"
-" let g:syntastic_cpp_compiler_options=" -std=c++17"
-let g:syntastic_cpp_cpplint_exec = 'cpplint'
-let g:syntastic_cpp_checkers = ['cpplint', 'gcc']
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_posix_standard = 1
-" let g:cpp_experimental_simple_template_highlight = 1
-let g:cpp_experimental_template_highlight = 1
-let g:cpp_concepts_highlight = 1
-let g:cpp_no_function_highlight = 1
-" textlint の configfile の追加
-" textlint.vim {{{
-" let g:textlint_configs = [
-  " \ '@azu/textlint-config-readme',
-  " \ '@example/textlint-config-example',
-  " \ ]
-" }}}
 
-"-------------------------------------------------------------------------
-" 全角スペースの表示
-"-------------------------------------------------------------------------
-function! ZenkakuSpace()
-    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
-endfunction
 
-if has('syntax')
-    augroup ZenkakuSpace
-        autocmd!
-        autocmd ColorScheme * call ZenkakuSpace()
-        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
-    augroup END
-    call ZenkakuSpace()
-endif
-" 挿入モード時、ステータスラインの色を変更
-let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
-if has('syntax')
-  augroup InsertHook
-    autocmd!
-    autocmd InsertEnter * call s:StatusLine('Enter')
-    autocmd InsertLeave * call s:StatusLine('Leave')
-  augroup END
-endif
-let s:slhlcmd = ''
-function! s:StatusLine(mode)
-  if a:mode == 'Enter'
-    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
-    silent exec g:hi_insert
-  else
-    highlight clear StatusLine
-    silent exec s:slhlcmd
-  endif
-endfunction
-function! s:GetHighlight(hi)
-  redir => hl
-  exec 'highlight '.a:hi
-  redir END
-  let hl = substitute(hl, '[\r\n]', '', 'g')
-  let hl = substitute(hl, 'xxx', '', '')
-  return hl
+"-------------------------------------------------------------------------------
+" mapleader
+"-------------------------------------------------------------------------------
+let mapleader = ','
+
+
+"-------------------------------------------------------------------------------
+" fzf
+"-------------------------------------------------------------------------------
+set rtp+=/goinfre/$USER/.brew/opt/fzf
+set rtp+=$HOME/.brew/opt/fzf
+nnoremap <Leader>f :FZF<CR>
+let $FZF_DEFAULT_OPTS = '--preview "bat --style=numbers --color=always --line-range :500 {}"'
+
+nnoremap <silent> <Leader>r :<C-u>silent call <SID>find_rip_grep()<CR>
+function! s:find_rip_grep() abort
+    call fzf#vim#grep(
+                \   'rg --ignore-file ~/.ignore --column --line-number --no-heading --hidden --smart-case .+',
+                \   1,
+                \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%', '?'),
+                \   0,
+                \ )
 endfunction
 
 
-"----------------------------------------------------------
+"-------------------------------------------------------------------------------
+" auto_save
+"-------------------------------------------------------------------------------
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+
+
+"-------------------------------------------------------------------------------
 " vim-table-mode
-"----------------------------------------------------------
-" `:TableModeTaggle` を `||` と `__` で有効化・無効化する
+"-------------------------------------------------------------------------------
 function! s:isAtStartOfLine(mapping)
-  let text_before_cursor = getline('.')[0 : col('.')-1]
-  let mapping_pattern = '\V' . escape(a:mapping, '\')
-  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
-  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+    let text_before_cursor = getline('.')[0 : col('.')-1]
+    let mapping_pattern = '\V' . escape(a:mapping, '\')
+    let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+    return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
 endfunction
 
 inoreabbrev <expr> <bar><bar>
-      \ <SID>isAtStartOfLine('\|\|') ?
-      \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+            \ <SID>isAtStartOfLine('\|\|') ?
+            \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
 inoreabbrev <expr> __
-      \ <SID>isAtStartOfLine('__') ?
-      \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+            \ <SID>isAtStartOfLine('__') ?
+            \ '<c-o>:silent! TableModeDisable<cr>' : '__'
 
 let g:table_mode_corner = '|'
 
 
-"----------------------------------------------------------
-" 検索位置が何番目かを表示する
-"----------------------------------------------------------
-set shortmess-=S
+"-------------------------------------------------------------------------------
+" NERDTree
+"-------------------------------------------------------------------------------
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+nnoremap <Leader>n :NERDTreeToggle<CR>
 
 
-"----------------------------------------------------------
-" minimap.vim
-"----------------------------------------------------------
-let g:minimap_width = 10
-let g:minimap_auto_start = 0
-let g:minimap_auto_start_win_enter = 1
+"-------------------------------------------------------------------------------
+" Show zenkaku spaces
+"-------------------------------------------------------------------------------
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
 
 
-"----------------------------------------------------------
-" vim-anzu: 現在の検索位置を画面に表示する
-"----------------------------------------------------------
+"-------------------------------------------------------------------------------
+" vim-anzu
+"-------------------------------------------------------------------------------
 " mapping
 nmap n <Plug>(anzu-n-with-echo)
 nmap N <Plug>(anzu-N-with-echo)
@@ -378,82 +241,76 @@ nmap # <Plug>(anzu-sharp-with-echo)
 nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 " statusline
 set statusline=%{anzu#search_status()}
-
 if exists("g:loaded_webdevicons")
-  call webdevicons#refresh()
+    call webdevicons#refresh()
 endif
 
 
-"----------------------------------------------------------
-" LanguageClient-neovim: LSP client
-" ccls: LSP server
-"----------------------------------------------------------
-let g:LanguageClient_serverCommands = {
-      \ 'c': ['ccls'],
-      \ 'cpp': ['ccls'],
+"-------------------------------------------------------------------------------
+" ddc
+"-------------------------------------------------------------------------------
+call ddc#custom#patch_global('ui', 'native')
+inoremap <silent><expr> <TAB>
+\ pumvisible() ? '<C-n>' :
+\ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
+\ '<TAB>' : ddc#map#manual_complete()
+call ddc#custom#patch_global('sources', ['around'])
+call ddc#custom#patch_global('sourceOptions', {
+      \ '_': {
+      \   'minAutoCompleteLength': 1,
       \ }
+      \})
+call ddc#custom#patch_global('sourceOptions', #{
+      \   around: #{ mark: 'A' },
+      \ })
+call ddc#custom#patch_global('sourceParams', #{
+      \   around: #{ maxSize: 500 },
+      \ })
+call ddc#custom#patch_global('sourceOptions', #{
+      \  _: #{
+      \    matchers: ['matcher_head'],
+      \  }
+      \})
+call ddc#custom#patch_global('sourceOptions', #{
+      \   _: #{
+      \     sorters: ['sorter_rank'],
+      \   }
+      \ })
+call ddc#enable()
 
-" マッピングの設定
-nmap <F5> <Plug>(lcn-menu)
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> gr :call LanguageClient#textDocument_rename()<CR>
+
+"-------------------------------------------------------------------------------
+" vim-lsp
+"-------------------------------------------------------------------------------
+call ddc#custom#patch_global('sources', ['vim-lsp'])
+call ddc#custom#patch_global('sourceOptions', {
+    \ 'vim-lsp': {
+    \   'matchers': ['matcher_head'],
+    \   'mark': 'lsp',
+    \ },
+    \ })
 
 
-"----------------------------------------------------------
-" deoplete: 入力補完
-"----------------------------------------------------------
-let g:deoplete#enable_at_startup = 1
-
-
-"----------------------------------------------------------
-" echodoc: コード定義を表示する
-"----------------------------------------------------------
+"-------------------------------------------------------------------------------
+" echodoc
+"-------------------------------------------------------------------------------
 " Or, you could use neovim's floating text feature.
 let g:echodoc#enable_at_startup = 1
-let g:echodoc#type = 'popup'
+let g:echodoc#type = 'echo'
+" let g:echodoc#type = 'popup'
 " To use a custom highlight for the float window,
 " change Pmenu to your highlight group
 highlight link EchoDocFloat Pmenu
+set cmdheight=2
 
 
 "----------------------------------------------------------
-" vista.vim: アウトラインを表示する
-"----------------------------------------------------------
-function! NearestMethodOrFunction() abort
-  return get(b:, 'vista_nearest_method_or_function', '')
-endfunction
-
-set statusline+=%{NearestMethodOrFunction()}
-
-" By default vista.vim never run if you don't call it explicitly.
-"
-" If you want to show the nearest function in your statusline automatically,
-" you can add the following line to your vimrc
-autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
-
-" How each level is indented and what to prepend.
-" This could make the display more compact or more spacious.
-" e.g., more compact: ["▸ ", ""]
-" Note: this option only works for the kind renderer, not the tree renderer.
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-
-" Ensure you have installed some decent font to show these pretty symbols, then you can enable icon for the kind.
-let g:vista#renderer#enable_icon = 1
-
-" The default icons can't be suitable for all the filetypes, you can extend it as you wish.
-let g:vista#renderer#icons = {
-\   "function": "\uf794",
-\   "variable": "\uf71b",
-\  }
-
-
-"----------------------------------------------------------
-" ultisnips: スニペットを管理する
+" ultisnips
 "----------------------------------------------------------
 let g:UltiSnipsUsePythonVersion    = 3
 let g:UltiSnipsEditSplit           = 'normal'
 let g:UltiSnipsSnippetDirectories  = ['~/.cache/dein/repos/github.com/honza/vim-snippets/UltiSnips']
+let g:UltiSnipsSnippetDirectories  = [$HOME.'/.vim/UltiSnips']
 let g:UltiSnipsEnableSnipMate      = 0
 let g:UltiSnipsExpandTrigger       = '<c-k>'
 let g:UltiSnipsJumpForwardTrigger  = '<c-f>'
@@ -462,18 +319,133 @@ command! SNIP UltiSnipsEdit
 
 
 "----------------------------------------------------------
-" vim-silicon: コードを画像に保存する
+" vim-airline
 "----------------------------------------------------------
-let g:silicon = {
-      \   'theme':                 'Solarized (dark)',
-      \   'font':                  'Hack',
-      \   'line-pad':                   2,
-      \   'pad-horiz':                 80,
-      \   'pad-vert':                 100,
-      \   'shadow-blur-radius':         0,
-      \   'shadow-offset-x':            0,
-      \   'shadow-offset-y':            0,
-      \   'line-number':           v:true,
-      \   'round-corner':          v:true,
-      \   'window-controls':       v:true,
-      \ }
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline_skip_empty_sections = 1
+
+
+"----------------------------------------------------------
+" Buffer
+"----------------------------------------------------------
+"" Buffer nav
+noremap <leader>z :bp<CR>
+noremap <leader>q :bp<CR>
+noremap <leader>x :bn<CR>
+noremap <leader>w :bn<CR>
+"" Close buffer
+noremap <leader>c :bd<CR>
+
+nnoremap <silent> <leader>b :Buffers<CR>
+
+
+"----------------------------------------------------------
+" vim-easymotion
+"----------------------------------------------------------
+" <Leader><Leader>s Find and move by {char}
+" <Leader><Leader>w Move to {word} below
+" <Leader><Leader>b Move to {word} above
+" <Leader><Leader>e Move to the end of {word} below
+" <Leader><Leader>ge Move to the end of {word} above
+" <Leader><Leader>f{char} Move to input {char} below
+" <Leader><Leader>F{char} Move to input {char} above
+
+" <Leader>f{char} to move to {char}
+map  <Leader>F <Plug>(easymotion-bd-f)
+nmap <Leader>F <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+" nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+" nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>l <Plug>(easymotion-bd-jk)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+" Move to line below
+map <Leader>j <Plug>(easymotion-j)
+" Move to line above
+map <Leader>k <Plug>(easymotion-k)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+" Search and move by any number of {char}
+nmap g/ <Plug>(easymotion-sn)
+
+
+"----------------------------------------------------------
+" Window
+"----------------------------------------------------------
+" Switching windows
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <C-h> <C-w>h
+
+" Split
+noremap <Leader>h :<C-u>split<CR>
+noremap <Leader>v :<C-u>vsplit<CR>
+
+
+"----------------------------------------------------------
+" session management
+"----------------------------------------------------------
+let g:session_directory = "~/.vim/session"
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
+
+nnoremap <leader>so :OpenSession<Space>
+nnoremap <leader>ss :SaveSession<Space>
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
+
+
+"----------------------------------------------------------
+" Mappings
+"----------------------------------------------------------
+" terminal emulation
+nnoremap <silent> <leader>t :terminal<CR>
+
+" History
+nmap <leader>y :History:<CR>
+
+" Tabs
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
+
+" Clean search (highlight)
+nnoremap <silent> <leader><space> :noh<cr>
+
+" Set working directory
+nnoremap <leader>. :lcd %:p:h<CR>
+" Opens an edit command with the path of the currently edited file filled in
+noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+" Opens a tab edit command with the path of the currently edited file filled
+noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
+
+" Git
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gc :Git commit --verbose<CR>
+noremap <Leader>gsh :Gpush<CR>
+noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
+noremap <Leader>gr :Gremove<CR>
+
+
+"----------------------------------------------------------
+" Markdown
+"----------------------------------------------------------
+augroup update_markdown_syntax
+  autocmd!
+  autocmd FileType markdown syntax match markdownError '\w\@<=\w\@='
+augroup END
